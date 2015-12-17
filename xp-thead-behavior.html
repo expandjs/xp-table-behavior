@@ -132,13 +132,6 @@ A behavior used to add table header capabilities on a custom element.
         /*********************************************************************/
 
         // HANDLER
-        _selectHandler: function (event) {
-
-            // Refiring
-            this.refire(event, event.type, {firer: this});
-        },
-
-        // HANDLER
         _sortHandler: function (event) {
 
             // Vars
@@ -148,6 +141,13 @@ A behavior used to add table header capabilities on a custom element.
 
             // Sorting
             if (cell && cell.index) { self.table.sort(cell.index); }
+        },
+
+        // HANDLER
+        _switchHandler: function (event) {
+
+            // Refiring
+            this.refire(event, event.type, {firer: this});
         }
     };
 

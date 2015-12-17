@@ -73,7 +73,7 @@ A behavior used to add table capabilities on a custom element.
 
         // LISTENERS
         listeners: {
-            'xp-active': '_selectHandler'
+            'xp-active': '_switchHandler'
         },
 
         // PROPERTIES
@@ -153,7 +153,7 @@ A behavior used to add table capabilities on a custom element.
         /*********************************************************************/
 
         // HANDLER
-        _selectHandler: function (event) {
+        _switchHandler: function (event) {
 
             // Checking
             if (event.type === 'click') { return; }
